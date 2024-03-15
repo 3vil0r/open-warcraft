@@ -991,7 +991,7 @@ void World::LoadConfigSettings(bool reload)
         else
             setConfig(CONFIG_UINT32_DEBUFF_LIMIT, 8);
     }
-
+    setConfig(CONFIG_BOOL_HARDCORE, "Hardcore", 0);
     setConfig(CONFIG_UINT32_ANTICRASH_OPTIONS, "Anticrash.Options", 0);
     setConfig(CONFIG_UINT32_ANTICRASH_REARM_TIMER, "Anticrash.Rearm.Timer", 0);
 
