@@ -1655,8 +1655,29 @@ void Player::Update(uint32 update_diff, uint32 p_time)
         m_regenTimer = 0;
     }
 
-    if (m_deathState == JUST_DIED)
+
+    if (m_deathState == JUST_DIED) {
+        // Get the player's current level
+        int currentLevel = GetLevel();
+
+        // Reduce the player's level by 3 levels
+        int newLevel = currentLevel - 3;
+
+        // Make sure the new level doesn't go below level 1
+        if (newLevel < 1)
+            newLevel = 1;
+
+        // Set the player's level to the new level
+        SetLevel(newLevel);
+
+        // Terminate the player (simulating the death)
         KillPlayer();
+    }
+
+
+
+
+
 
     if (m_nextSave > 0)
     {
