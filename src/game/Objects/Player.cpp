@@ -1667,12 +1667,16 @@ void Player::Update(uint32 update_diff, uint32 p_time)
         if (newLevel < 1)
             newLevel = 1;
 
+        // Reset talent points
+        ResetTalents();
+
         // Set the player's level to the new level
         SetLevel(newLevel);
 
         // Terminate the player (simulating the death)
         KillPlayer();
     }
+
 
 
 
