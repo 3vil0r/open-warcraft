@@ -1683,6 +1683,8 @@ void Player::Update(uint32 update_diff, uint32 p_time)
 
 
 
+
+
     if (m_nextSave > 0)
     {
         if (update_diff >= m_nextSave)
